@@ -40,7 +40,7 @@ class Article {
   public $corps;
 
 
-  public function getcorps(): string{
+  public function getcorps($page): string{
       $corps = '
       <div class="article">
         <img src="'.$this->photo.'" >
@@ -50,7 +50,7 @@ class Article {
               <p>'.$this->prix.'€</p>
             </div>
             <p><b>Description :</b> '.$this->description.'</p>
-            <div class="button_cont" align="center"><a class="example_d" href="#" >Ajouter au panier !</a></div>
+            <div class="button_cont" align="center"><a class="example_d" href="?page='.$page.'&action=add&article='.$this->ref.'" >Ajouter au panier !</a></div>
         </div>
       </div>
       ';
