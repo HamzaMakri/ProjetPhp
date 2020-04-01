@@ -1,0 +1,14 @@
+Article 1|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|12.5|REF001|ref1.png|type1
+Article 2|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|1.5|REF002|ref2.png|type2
+Article 3|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|52.5|REF003|ref3.png|type2
+Article 4|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|18.5|REF004|ref4.png|type2
+Article 5|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|1.5|REF005|ref5.png|type1
+Article 6|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|12.5|REF006|ref6.png|type2
+Article 7|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|16.5|REF007|ref7.png|type2
+Article 8|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|12.5|REF008|ref8.png|type1
+Article 9|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|2.5|REF009|ref9.png|type1
+Article 10|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|13.5|REF0010|ref10.png|type1
+Article 11|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|9.5|REF0011|ref11.png|type1
+Article 12|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|2.5|REF0012|ref12.png|type2
+Article 13|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|2.8|REF0013|ref13.png|type1
+Article 14|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|5|REF0014|ref14.png|type2
