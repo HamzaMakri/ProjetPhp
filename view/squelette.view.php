@@ -45,6 +45,13 @@ class squelette{
     </header>
 
     <body>
+
+
+    <button class="panier"><i class="fa fa-shopping-cart"></i> Panier </button>
+
+
+
+
     ';
 
     $this->footer = '

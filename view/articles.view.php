@@ -10,7 +10,6 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
  <!-- ================================================ -->
  <!-- ================================================ -->
 
-<button onclick="window.location.href = 'Login.html';" class="LOGIN" type="button" name="button">LOGIN </button>
 
 <div class="body">
 
@@ -29,7 +28,7 @@ foreach ($articles as $key => $value) {
  if ($letype == $value->type || $letype == 'type') {
 
    echo " <div class=\"ligne\"> ";
-   $case = $value->getcorps();
+   $case = $value->getcorps($letype);
    echo "$case";
    echo "  </div>";
 
