@@ -96,7 +96,7 @@ class ArticlePanier {
       return $corps;
   }
 
-  public function addPanier(Article $article){
+  public function __construct(Article $article){
 
     $this->nom = $article->nom;
     $this->description = $article->description;
@@ -105,13 +105,15 @@ class ArticlePanier {
     $this->photo = $article->photo;
     $this->type = $article->type;
 
-
-
+    $this->quantite = 1;
+    $this->prixTotal = $article->prix;
   }
 
-  public function __construct(){
-
+  public function plusUn(){
+    $this->quantite += 1;
+    $this->prixTotal = $this->prixTotal + $this->prixUnitaire;
   }
+
 }
 
 

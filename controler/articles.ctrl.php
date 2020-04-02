@@ -13,12 +13,29 @@ if (!isset($_SESSION['panier'])) {
   $_SESSION['panier'] = new Panier();
 }
 
-if (isset($_GET['action'])) {
+//Si on a cliqué sur "ajouter au panier !"
+if (isset($_GET['action']) ) {
   if ($_GET['action'] == 'add') {
-    foreach ($articles as $key => $value) {
 
+    //On parcours tout les articles pour verifier qu'il existe bien
+    foreach ($articles as $key => $value) {
       if ($value->ref == $_GET['article']) {
-        $_SESSION['panier']->arrayArticle[] = $value;
+
+        //On verifie s'il a deja été mis dans le panier
+        $dejaPresent = false;
+        foreach ($_SESSION['panier']->arrayArticle as $k => $val) {
+          if ($val->ref == $value->ref) {   //Dans le cas ou il y est deja
+            $val->plusUn();      //On incremente simplement sa quantitée
+            $dejaPresent = true;  //On informe qu'il y est
+            echo "il est present";
+          }
+        }
+        if (!$dejaPresent) { //si on l'a pas trouvé dans le panier, il faut donc l'ajouter
+          $newArticle = new ArticlePanier($value); //on commence par le creer en donnant en parametre l'article lui correspondant
+          $_SESSION['panier']->arrayArticle[] = $newArticle; //et on l'ajoute au panier
+          echo "il etait pas la";
+        }
+
       }
 
     }

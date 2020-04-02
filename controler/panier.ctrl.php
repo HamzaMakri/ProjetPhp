@@ -9,6 +9,13 @@ session_start();
 
 //var_dump($_SESSION['panier']);
 
+if (isset($_GET['action'])) {
+    if ($_GET['action'] == 'suppr') {
+        $_SESSION['panier']->viderPanier();
+    }
+}
+
+
 
 $view = new View('panier.view.php');
 

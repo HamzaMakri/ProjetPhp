@@ -13,7 +13,7 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
 <div class="body">
 
-  <h2> Votre Panier   </h2>
+  <h2> Votre Panier </h2>
 
 <h3>Resume de votre panier :</h3>
 <br>
@@ -22,6 +22,8 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 <p>------ Type 2 : </p>
 <p>============================</p>
 <p>Total : <?= $panier->prixTotal?>€</p>
+
+<a href="../controler/panier.ctrl.php?action=suppr">Vider le panier</a>
 
 <h3>Detail :</h3>
 
