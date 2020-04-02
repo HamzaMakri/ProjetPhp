@@ -13,8 +13,9 @@ class Panier {
   }
 
   public function setPrixTotal(){
+    $this->prixTotal = 0;
     foreach ($this->arrayArticle as $key => $value) {
-      $this->prixTotal = $value->prix;
+      $this->prixTotal = $this->prixTotal +  $value->prix;
     }
   }
 

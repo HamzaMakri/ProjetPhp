@@ -2,6 +2,7 @@
 
 require_once('../model/Article.class.php');
 require_once('../model/Panier.class.php');
+require_once('../framework/view.class.php');
 
 session_start();
 
@@ -26,9 +27,6 @@ if (isset($_GET['action'])) {
     //var_dump($_SESSION['panier']);
   }
 }
-
-require_once('../framework/view.class.php');
-
 
 
 

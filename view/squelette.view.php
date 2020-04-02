@@ -45,13 +45,9 @@ class squelette{
     </header>
 
     <body>
-
-
+<form action="../controler/panier.ctrl.php">
     <button class="panier"><i class="fa fa-shopping-cart"></i> Panier </button>
-
-
-
-
+</form>
     ';
 
     $this->footer = '
