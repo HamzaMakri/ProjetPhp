@@ -29,7 +29,10 @@ class Panier {
   }
 
   public function __construct(){
+    $this->arrayArticle = array();
     $this->nbarticle = 0;
+    $this->prixTotal = 0;
+
     //$this->arrayArticle = array();
   }
 }

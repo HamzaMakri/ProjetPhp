@@ -7,7 +7,13 @@ require_once('../framework/view.class.php');
 
 session_start();
 
-//var_dump($_SESSION['panier']);
+
+if (!isset($_SESSION['panier'])) {
+  $_SESSION['panier'] = new Panier();
+}
+
+
+var_dump($_SESSION['panier']);
 
 if (isset($_GET['action'])) {
     if ($_GET['action'] == 'suppr') {

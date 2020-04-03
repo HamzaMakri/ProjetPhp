@@ -26,23 +26,34 @@ header img{
 }
 
 
-button.LOGIN{
+
+button.panier{
   position: absolute;
   top : 0px;
-  left: 0px;
+  right: 0px;
   height: 30px;
-  color : #6E4F36;
+  color : black;
   border-color: #6E4F36;
   border-radius: 8px;
-  background-color: rgb(227,248,243);
-  margin: 10px 20px 20px  10px;
+  background-color: #c8ad7f;
+  margin: 10px 20px 0px  0px;
+  padding: 5px;
+  width: 100px;
+  height: 55px;
+
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+
 }
 
-button.LOGIN:hover{
+
+
+button.panier:hover{
   background-color: #6E4F36;
   color: rgb(227,248,243);
   border-color: rgb(227,248,243);
 }
+
 
 
 div.centre{
@@ -216,6 +227,11 @@ footer a:hover {
   margin: 5px 2px;
 }
 
+i.fa{
+  width: 20px;
+  height: 20px;
+}
+
 .fa:hover {
     opacity: 0.7;
 }
@@ -240,6 +256,10 @@ footer a:hover {
   color: white;
 }
 
+.fa-shopping-cart {
+  padding: 0px;
+  margin: 0px;
+}
 
 
 
