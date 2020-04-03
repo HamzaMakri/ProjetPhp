@@ -13,7 +13,7 @@ if (!isset($_SESSION['panier'])) {
 }
 
 
-var_dump($_SESSION['panier']);
+//var_dump($_SESSION['panier']);
 
 if (isset($_GET['action'])) {
     if ($_GET['action'] == 'suppr') {
