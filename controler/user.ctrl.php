@@ -5,7 +5,7 @@ require_once('../model/User.class.php');
 
 session_start();
 
-
+$view = new View('user.view.php');
 $db = new MyDB();
 // if(!$db){
 //    echo $db->lastErrorMsg();
@@ -20,7 +20,7 @@ if (isset($_GET['action']) ) {
         $email=$_REQUEST['email'];
         $password=$_REQUEST['password'];
 
-        echo "email : $email     //     mdp:       $password";
+        // echo "email : $email     //     mdp:       $password";
 
 
         $db = new MyDB();
@@ -42,13 +42,20 @@ if (isset($_GET['action']) ) {
 
         $result = $db->query("SELECT mdp FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
         $bddMDP = $result->fetchArray();
-        var_dump($bddMDP[0]);
 
         if ($bddMDP[0] == $password){
-          $bddNom = $db->exec("SELECT nom FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
-          $_SESSION['user'] = new User($bddNom,$email);
-        } 
+          $result = $db->query("SELECT nom FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
+          $bddNom = $result->fetchArray();
+          $_SESSION['user'] = new User($bddNom[0],$email);
+          $connexionOK = true;
+          var_dump($_SESSION['user']);
+        }else{
+          $connexionOK = false;
+        }
+        $view->assign('connexionOK',$connexionOK);
+
        }
+       $db->close();
     }
 }
 
@@ -56,13 +63,13 @@ if (isset($_GET['action']) ) {
 if (isset($_GET['action']) ) {
     if ($_GET['action'] == 'signup') {
       if (isset($_REQUEST['name']) && isset($_REQUEST['age']) && isset($_REQUEST['email'] ) && isset($_REQUEST['password'])) {
+
         $name=$_REQUEST['name'];
         $age=$_REQUEST['age'];
         $email=$_REQUEST['email'];
         $password=$_REQUEST['password'];
 
-        echo "nom : $name  //  age : $age    //  email : $email     //     mdp:       $password";
-
+        // echo "nom : $name  //  age : $age    //  email : $email     //     mdp:       $password";
 
         $db = new MyDB();
         // if(!$db){
@@ -70,41 +77,44 @@ if (isset($_GET['action']) ) {
         // } else {
         //    echo "Base ouverte OK\n";
         // }
-        //Inserer dans la basse de donnée les informations entrée
 
-        $bddNom = $db->query("SELECT nom FROM USER WHERE email = $email");
-        if (condition) {
-          // code...
+        //Inserer dans la basse de donnée les informations entrées
+
+        $debMail = substr($email, 0, strpos($email, "@"));
+        $finMail = substr($email, strpos($email, "@")+1, strlen($email));
+
+
+        $result = $db->query("SELECT email FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
+        $bddEmail = $result->fetchArray();
+        //var_dump($bddEmail[0]);
+
+        if($bddEmail[0] == $email ){
+          $inscriptionOK = false;
         }
-
-        $sql =<<<EOF
-          INSERT INTO user (ID,NOM,AGE,EMAIL,MDP)
-          VALUES (1, '$name', '$age', '$email', '$password' );
-        EOF;
-
-        $ret = $db->exec($sql);
-        if(!$ret){
-        echo $db->lastErrorMsg();
-        } else {
-         echo "OK\n";
-         $inscriptionOK = true;
+        else{
+          $sql =<<<EOF
+            INSERT INTO user (ID,NOM,AGE,EMAIL,MDP)
+            VALUES (1, '$name', '$age', '$email', '$password' );
+          EOF;
+          $ret = $db->exec($sql);
+          if(!$ret){
+          echo $db->lastErrorMsg();
+          } else {
+           // echo "OK\n";
+          }
+          $inscriptionOK = true;
         }
+        $view->assign('inscriptionOK',$inscriptionOK);
         $db->close();
-
-
-
        }
     }
 }
 
 
 
-
-$view = new View('user.view.php');
-
-// $view->assign('user',$articles);
-
 $view->display('user.view.php');
+
+
 
 
  ?>
