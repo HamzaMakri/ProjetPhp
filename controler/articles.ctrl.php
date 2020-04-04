@@ -27,17 +27,13 @@ if (isset($_GET['action']) ) {
           if ($val->ref == $value->ref) {   //Dans le cas ou il y est deja
             $val->plusUn();      //On incremente simplement sa quantitée
             $dejaPresent = true;  //On informe qu'il y est
-            echo "il est present";
           }
         }
         if (!$dejaPresent) { //si on l'a pas trouvé dans le panier, il faut donc l'ajouter
           $newArticle = new ArticlePanier($value); //on commence par le creer en donnant en parametre l'article lui correspondant
           $_SESSION['panier']->arrayArticle[] = $newArticle; //et on l'ajoute au panier
-          echo "il etait pas la";
         }
-
       }
-
     }
     $_SESSION['panier']->setPrixTotal();
     $_SESSION['panier']->setNbArticle();

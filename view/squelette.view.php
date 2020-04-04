@@ -31,7 +31,7 @@ class squelette{
 
         <div class="navbar">
             <ul>
-              <li><a href="../controler/main.ctrl.php">Acceuil</a></li>
+              <li><a href="../controler/main.ctrl.php">Accueil</a></li>
               <li><a href="#" aria-haspopup="true">Nos articles</a>
                 <ul class="dropdown" aria-label="submenu">
                   <li><a href="../controler/articles.ctrl.php?page=type1">Type 1</a></li>
@@ -48,6 +48,11 @@ class squelette{
 <form action="../controler/panier.ctrl.php">
     <button class="panier"><i class="fa fa-shopping-cart"></i> Panier </button>
 </form>
+
+<form action="../controler/user.ctrl.php">
+    <button class="login"><i class="fa fa-user"></i> Login </button>
+</form>
+
     ';
 
     $this->footer = '

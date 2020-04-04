@@ -42,12 +42,77 @@ button.panier{
   width: 100px;
   height: 55px;
 
-  font-size: 16px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
+  font-size: 16px;
+  cursor: pointer;
 
 }
 
+button.login{
+  position: absolute;
+  top : 0px;
+  left: 0px;
+  height: 30px;
+  color : black;
+  border-color: #6E4F36;
+  border-radius: 8px;
+  background-color: #c8ad7f;
+  margin: 10px 0px 0px  20px;
+  padding: 5px;
+  width: 100px;
+  height: 55px;
 
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+.in{
+
+  background-color: #1c87c9;
+
+
+  padding: 15px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+
+  color : white;
+  border-color: #6E4F36;
+  border-radius: 8px;
+  background-color: #3e0d61;
+
+  width: 250px;
+  height: 55px;
+
+}
+
+.up{
+
+  background-color: #1c87c9;
+
+  color: white;
+  padding: 15px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+
+  color : black;
+  border-color: #6E4F36;
+  border-radius: 8px;
+  background-color: #c8ad7f;
+
+  width: 200px;
+  height: 55px;
+
+}
 
 button.panier:hover{
   background-color: #6E4F36;
@@ -55,6 +120,19 @@ button.panier:hover{
   border-color: rgb(227,248,243);
 }
 
+button.login:hover{
+  background-color: #6E4F36;
+  color: rgb(227,248,243);
+  border-color: rgb(227,248,243);
+}
+
+
+
+.sign{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 
 h2{
@@ -332,8 +410,20 @@ i.fa{
   margin: 0px;
 }
 
+.fa-user {
+  padding: 0px;
+  margin: 0px;
+}
 
+.fa-user-plus {
+  padding: 0px;
+  margin: 0px;
+}
 
+.fa-sign-in {
+  padding: 0px;
+  margin: 0px;
+}
 
 .navigation {
   width: 100%;
