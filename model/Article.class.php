@@ -1,8 +1,6 @@
 <?php
 
 class ArticleDOA {
-
-
   private $bdd;
 
   function __construct() {
@@ -23,10 +21,6 @@ class ArticleDOA {
     return $result;
   }
 }
-
-
-
-//var_dump($articles);
 
 
 class Article {

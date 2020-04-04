@@ -1,8 +1,14 @@
 <?php
 
 require_once('squelette.view.php');
-$squelette = new squelette('stylesheet2.css');
 
+if (isset($_SESSION['user'])) {
+  $connecte = true;
+}else {
+  $connecte = false;
+}
+
+$squelette = new squelette('stylesheet2.css',$connecte);
 echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
  ?>

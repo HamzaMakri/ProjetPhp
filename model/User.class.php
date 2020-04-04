@@ -10,7 +10,6 @@
     function __construct($nm,$mail) {
       $this->nom = $nm;
       $this->email = $mail;
-      echo "user créé";
     }
   }
 

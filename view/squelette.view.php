@@ -6,7 +6,22 @@ class squelette{
   public $header;
   public $footer;
 
-  function __construct($css) {
+  function __construct($css,$connecte) {
+
+    $bouton;
+    if (!$connecte) {
+      $bouton = '
+      <form action="../controler/user.ctrl.php">
+          <button class="login"><i class="fa fa-sign-in"></i> Login </button>
+      </form>
+      ';
+    }else {
+      $bouton = '
+      <form action="../controler/espace.ctrl.php">
+          <button class="espacePerso"><i class="fa fa-user"></i>Espace personnel</button>
+      </form>
+      ';
+    }
 
     $this->header = '
 
@@ -49,9 +64,7 @@ class squelette{
     <button class="panier"><i class="fa fa-shopping-cart"></i> Panier </button>
 </form>
 
-<form action="../controler/user.ctrl.php">
-    <button class="login"><i class="fa fa-user"></i> Login </button>
-</form>
+'.$bouton.'
 
     ';
 

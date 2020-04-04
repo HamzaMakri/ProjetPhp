@@ -1,7 +1,14 @@
 <?php
 
 require_once('squelette.view.php');
-$squelette = new squelette('stylesheet2.css');
+
+if (isset($_SESSION['user'])) {
+  $connecte = true;
+}else {
+  $connecte = false;
+}
+
+$squelette = new squelette('stylesheet2.css',$connecte);
 
 echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
@@ -50,7 +57,20 @@ echo '
   }
 }
 
+if (isset($_GET['insc'])) {
+  if ($_GET['insc'] == 'ok') {
+    $inscriptionOK = true;
+  }
+}
 
+
+if (isset($inscriptionOK)) {
+  if ($inscriptionOK) {
+    echo "<p>Votre inscription est validé </p>";
+  }else {
+    echo "<p>Un compte est déjà lié à cette adresse mail, veuillez vous connecter ou saisir un autre mail</p>";
+  }
+}
 
 
 if (isset($_GET['action']) ) {
@@ -77,13 +97,6 @@ if (isset($_GET['action']) ) {
 
     ';
 
-    if (isset($inscriptionOK)) {
-      if ($inscriptionOK) {
-        echo "<p>Votre inscription est validé </p>";
-      }else {
-        echo "<p>Un compte est déjà lié à cette adresse mail, veuillez vous connecter ou saisir un autre mail</p>";
-      }
-    }
   }
 }
 

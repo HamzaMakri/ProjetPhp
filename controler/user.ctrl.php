@@ -14,6 +14,10 @@ $db = new MyDB();
 // }
 
 
+
+
+
+
 if (isset($_GET['action']) ) {
     if ($_GET['action'] == 'signin') {
       if (isset($_REQUEST['email'] ) && isset($_REQUEST['password'])) {
@@ -48,14 +52,15 @@ if (isset($_GET['action']) ) {
           $bddNom = $result->fetchArray();
           $_SESSION['user'] = new User($bddNom[0],$email);
           $connexionOK = true;
-          var_dump($_SESSION['user']);
+          header('location: ../controler/main.ctrl.php');
+          //var_dump($_SESSION['user']);
         }else{
           $connexionOK = false;
         }
         $view->assign('connexionOK',$connexionOK);
-
        }
        $db->close();
+
     }
 }
 
@@ -90,11 +95,15 @@ if (isset($_GET['action']) ) {
 
         if($bddEmail[0] == $email ){
           $inscriptionOK = false;
+          $view->assign('inscriptionOK',$inscriptionOK);
         }
         else{
+          $result = $db->query("SELECT id FROM user ORDER BY id DESC LIMIT 1;");
+          $idmax = $result->fetchArray();
+
           $sql =<<<EOF
             INSERT INTO user (ID,NOM,AGE,EMAIL,MDP)
-            VALUES (1, '$name', '$age', '$email', '$password' );
+            VALUES ($idmax[0]+1, '$name', '$age', '$email', '$password' );
           EOF;
           $ret = $db->exec($sql);
           if(!$ret){
@@ -103,8 +112,8 @@ if (isset($_GET['action']) ) {
            // echo "OK\n";
           }
           $inscriptionOK = true;
+          header('location: ../controler/user.ctrl.php?insc=ok');
         }
-        $view->assign('inscriptionOK',$inscriptionOK);
         $db->close();
        }
     }
