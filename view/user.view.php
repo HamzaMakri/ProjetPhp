@@ -40,7 +40,13 @@ echo '
 
 ';
 
-
+    if (isset($connexionOK)) {
+      if ($connexionOK) {
+        echo "<p>Vous êtes connecté </p>";
+      }else {
+        echo "<p>Ce compte n'existe pas, veuillez réessayer ou vous inscrire</p>";
+      }
+    }
   }
 }
 
@@ -50,29 +56,34 @@ echo '
 if (isset($_GET['action']) ) {
   if ($_GET['action'] == 'signup') {
 
-echo '
-<form  action="" method="POST" enctype="multipart/form-data">
- <input type="hidden" name="action" value="submit">
+    echo '
+    <form  action="" method="POST" enctype="multipart/form-data">
+     <input type="hidden" name="action" value="submit">
 
- Votre nom:<br>
- <input name="name" type="text" value="" size="30"/><br>
+     Votre nom:<br>
+     <input name="name" type="text" value="" size="30"/><br>
 
- Votre Age:<br>
- <input name="age" type="text" value="" size="30"/><br>
+     Votre Age:<br>
+     <input name="age" type="text" value="" size="30"/><br>
 
- Votre email:<br>
- <input name="email" type="text" value="" size="30"/><br>
+     Votre email:<br>
+     <input name="email" type="text" value="" size="30"/><br>
 
- Votre mot de passe:<br>
- <input name="password" type="text" value="" size="30"/><br><br><br>
+     Votre mot de passe:<br>
+     <input name="password" type="text" value="" size="30"/><br><br><br>
 
- <input type="submit" value="Submit"/>
- </form>
+     <input type="submit" value="Submit"/>
+     </form>
 
-';
-if ($inscriptionOK = true) {
-  echo "<p>Votre inscription est validé </p>";
-}
+    ';
+
+    if (isset($inscriptionOK)) {
+      if ($inscriptionOK) {
+        echo "<p>Votre inscription est validé </p>";
+      }else {
+        echo "<p>Un compte est déjà lié à cette adresse mail, veuillez vous connecter ou saisir un autre mail</p>";
+      }
+    }
   }
 }
 
