@@ -6,3 +6,11 @@ CREATE TABLE article (
   photo STRING,
   type STRING
   );
+
+  CREATE TABLE user (
+    id int,
+    nom STRING,
+    age int,
+    email STRING,
+    mdp STRING
+  )
