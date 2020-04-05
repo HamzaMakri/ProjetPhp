@@ -34,13 +34,13 @@ if (isset($_GET['action']) ) {
 echo '
 
 <form  action="" method="POST" enctype="multipart/form-data">
- <input type="hidden" name="action" value="submit">
+ <input type="hidden" name="action" value="submit" required="required">
 
  Votre email:<br>
- <input name="email" type="text" value="" size="30"/><br>
+ <input name="email" type="email" value="" size="30" required="required"><br>
 
  Votre mot de passe:<br>
- <input name="password" type="text" value="" size="30"/><br><br><br>
+ <input name="password" type="password" value="" size="30" required="required"><br><br><br>
 
  <input type="submit" value="Submit"/>
  </form>
@@ -78,19 +78,19 @@ if (isset($_GET['action']) ) {
 
     echo '
     <form  action="" method="POST" enctype="multipart/form-data">
-     <input type="hidden" name="action" value="submit">
+     <input type="hidden" name="action" value="submit" required="required">
 
      Votre nom:<br>
-     <input name="name" type="text" value="" size="30"/><br>
+     <input name="name" type="text" value="" size="30" required="required"/><br>
 
      Votre Age:<br>
-     <input name="age" type="text" value="" size="30"/><br>
+     <input name="age" type="number" value="" size="30" required="required"/><br>
 
      Votre email:<br>
-     <input name="email" type="text" value="" size="30"/><br>
+     <input name="email" type="email" value="" size="30" required="required"/><br>
 
      Votre mot de passe:<br>
-     <input name="password" type="text" value="" size="30"/><br><br><br>
+     <input name="password" type="password" value="" size="30" required="required"/><br><br><br>
 
      <input type="submit" value="Submit"/>
      </form>

@@ -1,14 +1,12 @@
-Article 1|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|12.5|REF001|ref1.png|type1
-Article 2|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|1.5|REF002|ref2.png|type2
-Article 3|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|52.5|REF003|ref3.png|type2
-Article 4|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|18.5|REF004|ref4.png|type2
-Article 5|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|1.5|REF005|ref5.png|type1
-Article 6|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|12.5|REF006|ref6.png|type2
-Article 7|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|16.5|REF007|ref7.png|type2
-Article 8|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|12.5|REF008|ref8.png|type1
-Article 9|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|2.5|REF009|ref9.png|type1
-Article 10|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|13.5|REF0010|ref10.png|type1
-Article 11|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|9.5|REF0011|ref11.png|type1
-Article 12|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|2.5|REF0012|ref12.png|type2
-Article 13|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|2.8|REF0013|ref13.png|type1
-Article 14|Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor|5|REF0014|ref14.png|type2
+St Valentin|Pour fêter la St Valentin avec votre partenaire|34.7|001|1.PNG|type1
+Mi Figue mi Framboise|Tartelette aux figues et aux framboises|8.0|002|2.PNG|type2
+4 Baies|Tarte aux fraises, framboises, myrtilles et mûres |25.5|003|3.PNG|type1
+Roses Rouges|Magnifique wedding cake rouge et roses rouges comestibles|48.95|004|4.PNG|type1
+Christmas Cake|Partagez ce gâteau avec votre famille à l'occasion du réveillon|32.1|005|5.PNG|type1
+Galette des Rois|Qui aura, la fève ?|35.25|006|6.PNG|type1
+Chocolat Froid|Delicieux gâteau au chocolat au theme de l'hiver|24.0|007|7.PNG|type1
+Acid Tornado|Tartelette au citron meringué|11.5|008|8.PNG|type2
+Chocolat Caramel|Tartelette au chocolat-caramel et aux éclats d'amandes|9.5|009|9.PNG|type2
+Orange Vibes|Tartelette à l'orange|8.90|0010|10.PNG|type2
+Sanglant|Delicieux gâteau à l'orange sanguine|26.20|0011|11.PNG|type1
+Ultra Violet|Petits delices aux violettes|15.8|0012|12.PNG|type2

@@ -19,7 +19,7 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 
 <div class="body">
 
-  <h2>Nos Articles</h2>
+  <h2>Disponible en ce moment :</h2>
 
   <div class="liste">
 

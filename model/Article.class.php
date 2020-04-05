@@ -37,7 +37,7 @@ class Article {
   public function getcorps($page): string{
       $corps = '
       <div class="article">
-        <img src="'.$this->photo.'" >
+        <img src="../view/design/'.$this->photo.'" >
         <div>
             <div class="header">
               <h1>'.$this->nom.'</h1>
@@ -75,7 +75,7 @@ class ArticlePanier {
   public function getcorps($page): string{
       $corps = '
       <div class="article">
-        <img src="'.$this->photo.'" >
+        <img src="../view/design/'.$this->photo.'" >
         <div>
             <div class="header">
               <h1>'.$this->nom.'</h1>
@@ -83,7 +83,6 @@ class ArticlePanier {
               <p>'.$this->quantite.'x'.$this->prixUnitaire.'€</p>
             </div>
             <p><b>Description :</b> '.$this->description.'</p>
-            <div class="button_cont" align="center"><a class="example_d" href="?action=add&article='.$this->ref.'" >Ajouter au panier !</a></div>
         </div>
       </div>
       ';

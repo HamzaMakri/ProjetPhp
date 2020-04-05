@@ -24,12 +24,22 @@ echo "$squelette->header"; //HEAD + HEADER + BALISE BODY OUVRANTE
 <h3>Resume de votre panier :</h3>
 <br>
 <p>Nombre d'articles :   <?= $panier->nbarticle?>   </p>
-<p>------ Type 1 : </p>
-<p>------ Type 2 : </p>
+<p>------ Gâteaux : </p>
+<p>------ Petites Faims : </p>
 <p>============================</p>
 <p>Total : <?= $panier->prixTotal?>€</p>
 
-<a href="../controler/panier.ctrl.php?action=suppr">Vider le panier</a>
+<a href="../controler/panier.ctrl.php?action=suppr">Vider le panier</a> <br> <br>
+
+<?php
+
+if (isset($_SESSION['user'])) {
+  echo '<a href="../controler/commande.ctrl.php">Passer la commande</a>';
+}else {
+  echo "<p> Vous devez être connecté pour valider la commande";
+}
+
+ ?>
 
 <h3>Detail :</h3>
 
@@ -48,7 +58,6 @@ foreach ($panier->arrayArticle as $key => $value) {
 
 }
 ?>
-
 
 </div>
 

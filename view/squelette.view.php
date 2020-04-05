@@ -47,14 +47,14 @@ class squelette{
         <div class="navbar">
             <ul>
               <li><a href="../controler/main.ctrl.php">Accueil</a></li>
-              <li><a href="#" aria-haspopup="true">Nos articles</a>
+              <li><a href="#" aria-haspopup="true">Nos créations</a>
                 <ul class="dropdown" aria-label="submenu">
-                  <li><a href="../controler/articles.ctrl.php?page=type1">Type 1</a></li>
-                  <li><a href="../controler/articles.ctrl.php?page=type2">Type 2</a></li>
-                  <li><a href="../controler/articles.ctrl.php?page=type">Tout les types</a></li>
+                  <li><a href="../controler/articles.ctrl.php?page=type1">Gâteaux</a></li>
+                  <li><a href="../controler/articles.ctrl.php?page=type2">Petites faims</a></li>
+                  <li><a href="../controler/articles.ctrl.php?page=type">Toute les créations</a></li>
                 </ul>
               </li>
-              <li><a href="#">Info</a></li>
+              <li><a href="../view/info.view.php">Info</a></li>
             </ul>
         </div>
     </header>
@@ -83,7 +83,7 @@ class squelette{
         <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
         <a href="https://twitter.com/" class="fa fa-twitter"></a>
         <a href="https://fr.linkedin.com/" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-instagram"></a>
+        <a href="https://www.instagram.com/lamria.pastry/" class="fa fa-instagram"></a>
           <p>Copyright@MAKRI-ESTEVES AUDAS-Mini Projet PHP</p>
 
         </div>

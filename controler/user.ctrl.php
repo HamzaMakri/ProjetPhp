@@ -39,18 +39,16 @@ if (isset($_GET['action']) ) {
         $debMail = substr($email, 0, strpos($email, "@"));
         $finMail = substr($email, strpos($email, "@")+1, strlen($email));
 
-        // echo "mail composé recomposé ça fait ça : $debMail@$finMail ";
-        // echo " debut mail : $debMail ";
-        // echo " fin mail : $finMail ";
-
-
         $result = $db->query("SELECT mdp FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
         $bddMDP = $result->fetchArray();
 
         if ($bddMDP[0] == $password){
           $result = $db->query("SELECT nom FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
           $bddNom = $result->fetchArray();
-          $_SESSION['user'] = new User($bddNom[0],$email);
+          $result = $db->query("SELECT id FROM USER WHERE email ='".$debMail."@".$finMail."'".';');
+          $bddId = $result->fetchArray();
+          $_SESSION['user'] = new User($bddNom[0],$email,$bddId[0]);
+          //var_dump($_SESSION['user']);
           $connexionOK = true;
           header('location: ../controler/main.ctrl.php');
           //var_dump($_SESSION['user']);
