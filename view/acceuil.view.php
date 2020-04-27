@@ -2,6 +2,8 @@
 
 require_once('squelette.view.php');
 
+var_dump($_SESSION);
+
 
 if (isset($_SESSION['user'])) {
   $connecte = true;

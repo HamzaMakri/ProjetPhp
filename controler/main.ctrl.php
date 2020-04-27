@@ -27,6 +27,8 @@
 require_once('../framework/view.class.php');
 require_once('../model/Panier.class.php');
 require_once('../model/Article.class.php');
+require_once('../model/User.class.php');
+
 
 session_start();    // pour detruire la session : session_destroy();
 
